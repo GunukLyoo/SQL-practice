@@ -1,0 +1,2 @@
+SELECT count(t.name) count from 
+(select name from animal_ins group by name) as t
