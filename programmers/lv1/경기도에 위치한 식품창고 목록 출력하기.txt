@@ -1,0 +1,7 @@
+SELECT warehouse_id, warehouse_name, address, 
+case
+when freezer_yn is null then 'N'
+when freezer_yn = 'N' then 'N'
+else 'Y'
+end as freezer_yn
+from food_warehouse where address like '경기도%'
