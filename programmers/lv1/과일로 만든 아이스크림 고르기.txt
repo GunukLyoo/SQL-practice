@@ -1,0 +1,1 @@
+SELECT fh.flavor from first_half fh, icecream_info ii where fh.flavor = ii.flavor and ii.ingredient_type = 'fruit_based' and total_order > 3000 order by total_order desc
