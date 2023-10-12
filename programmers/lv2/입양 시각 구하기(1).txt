@@ -1,0 +1,5 @@
+select t.hh hour, count(*) count 
+from (SELECT hour(datetime) hh from animal_outs) t
+where t.hh >= 9 and t.hh < 20
+group by t.hh
+order by t.hh asc
