@@ -1,0 +1,4 @@
+select product_code, (price * t.sales_amount) sales
+from product, (select product_id, sum(sales_amount) sales_amount from offline_sale group by product_id) t
+where product.product_id = t.product_id
+order by sales desc, product_code asc
