@@ -1,0 +1,3 @@
+SELECT t.category, count(*) products
+from (select substring(product_code, 1, 2) category from product) t
+group by t.category
