@@ -1,0 +1,1 @@
+select salary*months as s, count(salary*months) from employee group by s order by s desc limit 1
