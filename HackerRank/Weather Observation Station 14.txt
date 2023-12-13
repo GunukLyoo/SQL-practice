@@ -1,0 +1,1 @@
+select truncate(lat_n, 4) s from station where lat_n < 137.2345 order by s desc limit 1
